@@ -45,6 +45,13 @@ h6 {
   isolation: isolate;
 }
 
+header,
+main,
+section,
+footer {
+  border: 2px solid;
+}
+
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;
