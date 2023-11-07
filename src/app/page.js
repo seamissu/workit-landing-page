@@ -7,11 +7,20 @@ export default function Home() {
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
-        <div>
-          <Image alt="logo" />
-          <Link href="/">Apply for access</Link>
+        <div className={styles.superheader}>
+          <Image
+            src="/images/logo-light.svg"
+            alt="Website Logo"
+            width={96}
+            height={24}
+          />
+          <Link href="/" className={styles.link}>
+            Apply for access
+          </Link>
         </div>
-        <p>Data tailored to your needs.</p>
+        <p>
+          Data <span>tailored</span> to your needs.
+        </p>
         <button>Learn more</button>
       </header>
 

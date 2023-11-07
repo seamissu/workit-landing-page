@@ -6,11 +6,66 @@
     'main'
     'profile'
     'footer';
-  grid-template-rows: 700px 700px 700px 300px;
+  grid-template-rows: 660px 700px 700px 300px;
 }
 
 .header {
   grid-area: header;
+  background: var(--dark-purple);
+
+  padding-left: 160px;
+  padding-right: 160px;
+  padding-top: 60px;
+
+  display: flex;
+  gap: 36px;
+  flex-direction: column;
+}
+
+.superheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.link {
+  font-family: var(--font-manrope);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  text-decoration: none;
+  border-bottom: 3px solid var(--eucaplyptus);
+}
+
+.header p {
+  align-self: center;
+
+  font-family: var(--font-fraunces) 144pt;
+  font-size: 80px;
+  color: var(--white);
+  font-weight: 600;
+  line-height: 80px;
+  text-align: center;
+  width: 635px;
+}
+
+.header p > span {
+  border-bottom: 3px solid var(--eucaplyptus);
+}
+
+.header button {
+  align-self: center;
+
+  width: 160px;
+  height: 60px;
+  background-color: var(--eucaplyptus);
+
+  font-family: var(--font-manrope);
+  color: var(--dark-purple);
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .main {
