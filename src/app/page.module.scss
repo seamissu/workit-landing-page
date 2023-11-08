@@ -1,3 +1,7 @@
+// Use Scss variable
+$tablet-and-below: 1100px;
+$mobile-and-below: 550px;
+
 .wrapper {
   display: grid;
   min-height: 100%;
@@ -12,6 +16,10 @@
   overflow: hidden;
   background-color: var(--ghost-white);
   --padding-idention: 160px;
+
+  @media (max-width: $tablet-and-below) {
+    grid-template-rows: 540px 1000px 1fr 250px;
+  }
 }
 
 .header {
@@ -31,10 +39,11 @@
 
   position: relative;
 
-  @media (max-width: 800px) {
-    padding-left: 39px;
-    padding-right: 39px;
-    background-image: url('/images/header-tablet.svg');
+  @media (max-width: $tablet-and-below) {
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-top: 38px;
+    background-image: url('/images/header-curve-tablet.svg');
   }
 }
 
@@ -54,7 +63,7 @@
   text-decoration: none;
   border-bottom: 3px solid var(--eucaplyptus);
 
-  @media (max-width: 800px) {
+  @media (max-width: $tablet-and-below) {
     font-size: 16px;
   }
 }
@@ -74,7 +83,7 @@
   text-align: center;
   width: 635px;
 
-  @media (max-width: 800px) {
+  @media (max-width: $tablet-and-below) {
     width: 573px;
     font-size: 60px;
     line-height: 60px;
@@ -97,6 +106,10 @@
   font-size: 18px;
   font-weight: 700;
   border: 0;
+
+  @media (max-width: $tablet-and-below) {
+    font-size: 16px;
+  }
 }
 
 .header button:hover {
@@ -109,6 +122,10 @@
   position: absolute;
   top: 116px;
   left: -112px;
+
+  @media (max-width: $tablet-and-below) {
+    left: -160px;
+  }
 }
 
 .bgpatterntwo {
@@ -116,6 +133,10 @@
   top: 314px;
   right: -48px;
   overflow: hidden;
+
+  @media (max-width: $tablet-and-below) {
+    right: -68px;
+  }
 }
 
 .heropic {
@@ -124,6 +145,12 @@
   left: 0;
   right: 0;
   margin: auto;
+
+  @media (max-width: $tablet-and-below) {
+    width: 480px;
+    height: 287px;
+    bottom: -150px;
+  }
 }
 
 .main {
@@ -143,17 +170,28 @@
   background-position: bottom;
   background-size: cover;
 
-  @media (max-width: 800px) {
+  @media (max-width: $tablet-and-below) {
     background-image: url('/images/main-curve-tablet.svg');
+    flex-direction: column;
   }
 }
 
 .main article {
-  width: 354px;
+  max-width: 354px;
   height: 308px;
   display: grid;
   justify-content: center;
   justify-items: center;
+
+  @media (max-width: $tablet-and-below) {
+    grid-template-areas:
+      'number heading'
+      'number details';
+    gap: 16px 32px;
+    justify-content: revert;
+    justify-items: revert;
+    max-width: 573px;
+  }
 }
 
 .main div {
@@ -165,6 +203,23 @@
   border-radius: 50%;
   display: grid;
   place-content: center;
+
+  @media (max-width: $tablet-and-below) {
+    grid-area: number;
+    width: 48px;
+    height: 48px;
+    align-self: center;
+  }
+}
+
+.main h2 {
+  font-size: 32px;
+  font-weight: 600;
+  @media (max-width: $tablet-and-below) {
+    grid-area: heading;
+    align-self: end;
+    font-size: 28px;
+  }
 }
 
 .main p {
@@ -173,6 +228,12 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 2;
+
+  @media (max-width: $tablet-and-below) {
+    grid-area: details;
+    text-align: revert;
+    font-size: 16px;
+  }
 }
 
 .profile {
