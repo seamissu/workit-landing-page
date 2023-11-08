@@ -22,6 +22,14 @@ export default function Home() {
           Data <span>tailored</span> to your needs.
         </p>
         <button>Learn more</button>
+
+        <Image
+          className={styles.heropic}
+          alt="A smartphone used as a hero picture"
+          src="/images/image-hero.webp"
+          width={715}
+          height={427}
+        />
       </header>
 
       <main className={styles.main}>
@@ -53,8 +61,14 @@ export default function Home() {
           </p>
         </article>
       </main>
+
       <section className={styles.profile}>
-        <Image alt="The founder image" />
+        <Image
+          alt="The founder image"
+          src="/images/image-founder.webp"
+          width={477}
+          height={477}
+        />
         <article>
           <h2>Be the first to test</h2>
           <p>
@@ -66,7 +80,22 @@ export default function Home() {
           <button>Apply for access</button>
         </article>
       </section>
+
       <footer className={styles.footer}>Footer</footer>
+      <Image
+        className={styles.bgpatternone}
+        src="/images/bg-pattern-1.svg"
+        alt="background pattern one"
+        width={270}
+        height={215}
+      />
+      <Image
+        className={styles.bgpatterntwo}
+        src="/images/bg-pattern-2.svg"
+        alt="background pattern two"
+        width={142}
+        height={113}
+      />
     </div>
   );
 }

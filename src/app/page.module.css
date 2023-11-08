@@ -6,12 +6,19 @@
     'main'
     'profile'
     'footer';
-  grid-template-rows: 660px 700px 700px 300px;
+  grid-template-rows: 660px 730px 1fr 300px;
+
+  position: relative;
+  overflow: hidden;
+  /* background-color: var(--ghost-white); */
 }
 
 .header {
   grid-area: header;
-  background: var(--dark-purple);
+  background: var(--ghost-white);
+  background-image: url('/images/header-curve.svg');
+  background-position: bottom;
+  background-size: cover;
 
   padding-left: 160px;
   padding-right: 160px;
@@ -20,6 +27,8 @@
   display: flex;
   gap: 36px;
   flex-direction: column;
+
+  position: relative;
 }
 
 .superheader {
@@ -59,21 +68,123 @@
   align-self: center;
 
   width: 160px;
-  height: 60px;
+  min-height: 60px;
   background-color: var(--eucaplyptus);
 
   font-family: var(--font-manrope);
   color: var(--dark-purple);
   font-size: 18px;
   font-weight: 700;
+  border: 0;
+}
+
+.bgpatternone {
+  position: absolute;
+  top: 116px;
+  left: -112px;
+}
+
+.bgpatterntwo {
+  position: absolute;
+  top: 314px;
+  right: -48px;
+  overflow: hidden;
+}
+
+.heropic {
+  position: absolute;
+  bottom: -220px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .main {
+  font-family: var(--font-fraunces);
+  color: var(--dark-purple);
   grid-area: main;
+  margin-top: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 160px;
+  padding-right: 160px;
+
+  background: var(--white);
+  background-image: url('/images/main-curve.svg');
+  background-position: bottom;
+  background-size: cover;
+}
+
+.main article {
+  width: 354px;
+  height: 308px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.main div {
+  font-weight: 600;
+  font-size: 24px;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--dark-purple);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.main p {
+  font-family: var(--font-manrope);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
 }
 
 .profile {
   grid-area: profile;
+  padding-left: 160px;
+  padding-right: 160px;
+  display: flex;
+}
+
+.profile article {
+  width: 730px;
+  height: 413px;
+  background-color: var(--dark-purple);
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.profile article h2 {
+  font-family: var(--font-fraunces);
+  color: var(--white);
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.profile article p {
+  font-family: var(--font-manrope);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.profile button {
+  font-family: var(--font-manrope);
+  background-color: var(--eucaplyptus);
+  color: var(--dark-purple);
+  font-weight: 700;
+  font-size: 18px;
+  width: 190px;
+  height: 60px;
+  line-height: 2;
 }
 
 .footer {
