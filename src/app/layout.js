@@ -1,5 +1,5 @@
 import { Fraunces, Manrope } from 'next/font/google';
-import './globals.css';
+import './globals.scss';
 
 const fraunces = Fraunces({
   subsets: ['latin'],

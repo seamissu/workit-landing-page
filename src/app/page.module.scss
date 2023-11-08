@@ -11,6 +11,7 @@
   position: relative;
   overflow: hidden;
   background-color: var(--ghost-white);
+  --padding-idention: 160px;
 }
 
 .header {
@@ -20,8 +21,8 @@
   background-position: bottom;
   background-size: cover;
 
-  padding-left: 160px;
-  padding-right: 160px;
+  padding-left: var(--padding-idention);
+  padding-right: var(--padding-idention);
   padding-top: 60px;
 
   display: flex;
@@ -46,6 +47,10 @@
   line-height: 2;
   text-decoration: none;
   border-bottom: 3px solid var(--eucaplyptus);
+}
+
+.link:hover {
+  color: var(--eucaplyptus);
 }
 
 .header p {
@@ -78,6 +83,12 @@
   border: 0;
 }
 
+.header button:hover {
+  background-color: var(--dark-purple);
+  border: 2px solid var(--eucaplyptus);
+  color: var(--eucaplyptus);
+}
+
 .bgpatternone {
   position: absolute;
   top: 116px;
@@ -108,8 +119,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding-left: 160px;
-  padding-right: 160px;
+  padding-left: var(--padding-idention);
+  padding-right: var(--padding-idention);
 
   background-color: var(--white);
   background-image: url('/images/main-curve.svg');
@@ -146,7 +157,7 @@
 
 .profile {
   grid-area: profile;
-  padding: 120px 160px 120px 160px;
+  padding: 120px var(--padding-idention) 120px var(--padding-idention);
 
   display: flex;
   justify-content: center;
@@ -190,6 +201,12 @@
   height: 60px;
   line-height: 2;
   border: 0;
+}
+
+.profile button:hover {
+  background-color: var(--dark-purple);
+  border: 2px solid var(--eucaplyptus);
+  color: var(--eucaplyptus);
 }
 
 .bgpatternthree {
