@@ -6,16 +6,16 @@
     'main'
     'profile'
     'footer';
-  grid-template-rows: 660px 730px 1fr 300px;
+  grid-template-rows: 660px 730px 1fr 350px;
 
   position: relative;
   overflow: hidden;
-  /* background-color: var(--ghost-white); */
+  background-color: var(--ghost-white);
 }
 
 .header {
   grid-area: header;
-  background: var(--ghost-white);
+  background-color: var(--ghost-white);
   background-image: url('/images/header-curve.svg');
   background-position: bottom;
   background-size: cover;
@@ -111,7 +111,7 @@
   padding-left: 160px;
   padding-right: 160px;
 
-  background: var(--white);
+  background-color: var(--white);
   background-image: url('/images/main-curve.svg');
   background-position: bottom;
   background-size: cover;
@@ -150,6 +150,7 @@
 
   display: flex;
   justify-content: center;
+  background-color: var(--white);
 }
 
 .profile article {
@@ -199,4 +200,23 @@
 
 .footer {
   grid-area: footer;
+  display: grid;
+  place-content: center;
+  padding-top: 80px;
+  background-color: var(--white);
+}
+
+.logo_icon_wrapper {
+  width: 120px;
+  height: 110px;
+  display: grid;
+}
+
+.footericon {
+  justify-self: center;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
 }

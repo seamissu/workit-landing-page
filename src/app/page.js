@@ -11,8 +11,8 @@ export default function Home() {
           <Image
             src="/images/logo-light.svg"
             alt="Website Logo"
-            width={96}
-            height={24}
+            width={97}
+            height={26}
           />
           <Link href="/" className={styles.link}>
             Apply for access
@@ -88,7 +88,38 @@ export default function Home() {
         </article>
       </section>
 
-      <footer className={styles.footer}>Footer</footer>
+      <footer className={styles.footer}>
+        <div className={styles.logo_icon_wrapper}>
+          <Image
+            className={styles.footericon}
+            src="/images/logo-dark.svg"
+            alt="a website logo in the footer"
+            width={97}
+            height={26}
+          />
+          <div className={styles.social}>
+            <Image
+              src="/images/icon-facebook.svg"
+              alt="facebook icon"
+              width={20}
+              height={20}
+            />
+            <Image
+              src="/images/icon-twitter.svg"
+              alt="twitter icon"
+              width={20}
+              height={20}
+            />
+            <Image
+              src="/images/icon-instagram.svg"
+              alt="instagram icon"
+              width={20}
+              height={20}
+            />
+          </div>
+        </div>
+      </footer>
+
       <Image
         className={styles.bgpatternone}
         src="/images/bg-pattern-1.svg"
