@@ -146,19 +146,22 @@
 
 .profile {
   grid-area: profile;
-  padding-left: 160px;
-  padding-right: 160px;
+  padding: 120px 160px 120px 160px;
+
   display: flex;
+  justify-content: center;
 }
 
 .profile article {
-  width: 730px;
-  height: 413px;
+  max-width: 730px;
   background-color: var(--dark-purple);
   padding: 64px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  position: relative;
+  left: -80px;
+  top: 170px;
 }
 
 .profile article h2 {
@@ -185,6 +188,13 @@
   width: 190px;
   height: 60px;
   line-height: 2;
+  border: 0;
+}
+
+.bgpatternthree {
+  position: absolute;
+  bottom: -62px;
+  right: 73px;
 }
 
 .footer {

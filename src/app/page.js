@@ -78,6 +78,13 @@ export default function Home() {
             in touch to schedule a call.`}
           </p>
           <button>Apply for access</button>
+          <Image
+            className={styles.bgpatternthree}
+            alt="background pattern three"
+            src="/images/bg-pattern-3.svg"
+            width={225}
+            height={216}
+          />
         </article>
       </section>
 
