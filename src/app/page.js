@@ -64,6 +64,7 @@ export default function Home() {
 
       <section className={styles.profile}>
         <Image
+          className={styles.founderimage}
           alt="The founder image"
           src="/images/image-founder.webp"
           width={477}

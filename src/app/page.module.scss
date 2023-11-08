@@ -16,6 +16,7 @@ $mobile-and-below: 550px;
   overflow: hidden;
   background-color: var(--ghost-white);
   --padding-idention: 160px;
+  --padding-idention-tablet: 38px;
 
   @media (max-width: $tablet-and-below) {
     grid-template-rows: 540px 1000px 1fr 250px;
@@ -40,9 +41,9 @@ $mobile-and-below: 550px;
   position: relative;
 
   @media (max-width: $tablet-and-below) {
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-top: 38px;
+    padding-left: var(--padding-idention-tablet);
+    padding-right: var(--padding-idention-tablet);
+    padding-top: var(--padding-idention-tablet);
     background-image: url('/images/header-curve-tablet.svg');
   }
 }
@@ -162,8 +163,8 @@ $mobile-and-below: 550px;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding-left: var(--padding-idention);
-  padding-right: var(--padding-idention);
+  padding-left: 160px;
+  padding-right: 160px;
 
   background-color: var(--white);
   background-image: url('/images/main-curve.svg');
@@ -243,6 +244,18 @@ $mobile-and-below: 550px;
   display: flex;
   justify-content: center;
   background-color: var(--white);
+
+  @media (max-width: $tablet-and-below) {
+    padding: 120px var(--padding-idention-tablet) 120px
+      var(--padding-idention-tablet);
+  }
+}
+
+.founderimage {
+  @media (max-width: $tablet-and-below) {
+    width: 282px;
+    height: 282px;
+  }
 }
 
 .profile article {
@@ -255,6 +268,11 @@ $mobile-and-below: 550px;
   position: relative;
   left: -80px;
   top: 170px;
+  @media (max-width: $tablet-and-below) {
+    max-width: 514px;
+    padding: 48px;
+    top: 150px;
+  }
 }
 
 .profile article h2 {
@@ -262,6 +280,9 @@ $mobile-and-below: 550px;
   color: var(--white);
   font-size: 56px;
   font-weight: 600;
+  @media (max-width: $tablet-and-below) {
+    font-size: 48px;
+  }
 }
 
 .profile article p {
@@ -270,6 +291,9 @@ $mobile-and-below: 550px;
   font-size: 18px;
   font-weight: 400;
   line-height: 2;
+  @media (max-width: $tablet-and-below) {
+    font-size: 16px;
+  }
 }
 
 .profile button {
@@ -282,6 +306,12 @@ $mobile-and-below: 550px;
   height: 60px;
   line-height: 2;
   border: 0;
+
+  @media (max-width: $tablet-and-below) {
+    width: 172px;
+    height: 55px;
+    font-size: 16px;
+  }
 }
 
 .profile button:hover {
@@ -293,7 +323,7 @@ $mobile-and-below: 550px;
 .bgpatternthree {
   position: absolute;
   bottom: -62px;
-  right: 73px;
+  right: 10px;
 }
 
 .footer {
