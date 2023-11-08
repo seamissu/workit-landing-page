@@ -30,6 +30,12 @@
   flex-direction: column;
 
   position: relative;
+
+  @media (max-width: 800px) {
+    padding-left: 39px;
+    padding-right: 39px;
+    background-image: url('/images/header-tablet.svg');
+  }
 }
 
 .superheader {
@@ -47,6 +53,10 @@
   line-height: 2;
   text-decoration: none;
   border-bottom: 3px solid var(--eucaplyptus);
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
 }
 
 .link:hover {
@@ -63,6 +73,12 @@
   line-height: 80px;
   text-align: center;
   width: 635px;
+
+  @media (max-width: 800px) {
+    width: 573px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .header p > span {
@@ -126,6 +142,10 @@
   background-image: url('/images/main-curve.svg');
   background-position: bottom;
   background-size: cover;
+
+  @media (max-width: 800px) {
+    background-image: url('/images/main-curve-tablet.svg');
+  }
 }
 
 .main article {
