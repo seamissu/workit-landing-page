@@ -81,7 +81,8 @@ $mobile-and-below: 550px;
   }
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
   color: var(--eucaplyptus);
 }
 
@@ -133,7 +134,8 @@ $mobile-and-below: 550px;
   }
 }
 
-.header button:hover {
+.header button:hover,
+.header button:focus {
   background-color: var(--dark-purple);
   border: 2px solid var(--eucaplyptus);
   color: var(--eucaplyptus);
@@ -419,7 +421,8 @@ $mobile-and-below: 550px;
   }
 }
 
-.profile button:hover {
+.profile button:hover,
+.profile button:focus {
   background-color: var(--dark-purple);
   border: 2px solid var(--eucaplyptus);
   color: var(--eucaplyptus);
