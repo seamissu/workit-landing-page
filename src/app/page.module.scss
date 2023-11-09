@@ -15,11 +15,17 @@ $mobile-and-below: 550px;
   position: relative;
   overflow: hidden;
   background-color: var(--ghost-white);
-  --padding-idention: 160px;
-  --padding-idention-tablet: 38px;
+
+  --padding-identation: 160px;
+  --padding-identation-tablet: 38px;
+  --padding-identation-mobile: 16px;
 
   @media (max-width: $tablet-and-below) {
     grid-template-rows: 540px 1000px 1fr 250px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    grid-template-rows: 480px 1100px 1fr 250px;
   }
 }
 
@@ -30,8 +36,8 @@ $mobile-and-below: 550px;
   background-position: bottom;
   background-size: cover;
 
-  padding-left: var(--padding-idention);
-  padding-right: var(--padding-idention);
+  padding-left: var(--padding-identation);
+  padding-right: var(--padding-identation);
   padding-top: 60px;
 
   display: flex;
@@ -41,10 +47,16 @@ $mobile-and-below: 550px;
   position: relative;
 
   @media (max-width: $tablet-and-below) {
-    padding-left: var(--padding-idention-tablet);
-    padding-right: var(--padding-idention-tablet);
-    padding-top: var(--padding-idention-tablet);
+    padding-left: var(--padding-identation-tablet);
+    padding-right: var(--padding-identation-tablet);
+    padding-top: var(--padding-identation-tablet);
     background-image: url('/images/header-curve-tablet.svg');
+  }
+
+  @media (max-width: $mobile-and-below) {
+    padding-left: var(--padding-identation-mobile);
+    padding-right: var(--padding-identation-mobile);
+    background-image: url('/images/header-curve-mobile.svg');
   }
 }
 
@@ -76,7 +88,7 @@ $mobile-and-below: 550px;
 .header p {
   align-self: center;
 
-  font-family: var(--font-fraunces) 144pt;
+  font-family: var(--font-fraunces);
   font-size: 80px;
   color: var(--white);
   font-weight: 600;
@@ -85,9 +97,15 @@ $mobile-and-below: 550px;
   width: 635px;
 
   @media (max-width: $tablet-and-below) {
-    width: 573px;
-    font-size: 60px;
+    width: 520px;
+    font-size: 55px;
     line-height: 60px;
+  }
+
+  @media (max-width: $tablet-and-below) {
+    width: 340px;
+    font-size: 45px;
+    line-height: 50px;
   }
 }
 
@@ -110,6 +128,8 @@ $mobile-and-below: 550px;
 
   @media (max-width: $tablet-and-below) {
     font-size: 16px;
+    width: 133px;
+    min-height: 55px;
   }
 }
 
@@ -127,6 +147,10 @@ $mobile-and-below: 550px;
   @media (max-width: $tablet-and-below) {
     left: -160px;
   }
+
+  @media (max-width: $mobile-and-below) {
+    display: none;
+  }
 }
 
 .bgpatterntwo {
@@ -137,6 +161,10 @@ $mobile-and-below: 550px;
 
   @media (max-width: $tablet-and-below) {
     right: -68px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    display: none;
   }
 }
 
@@ -152,6 +180,12 @@ $mobile-and-below: 550px;
     height: 287px;
     bottom: -150px;
   }
+
+  @media (max-width: $mobile-and-below) {
+    width: 298px;
+    height: 178px;
+    bottom: -108px;
+  }
 }
 
 .main {
@@ -163,8 +197,8 @@ $mobile-and-below: 550px;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding-left: 160px;
-  padding-right: 160px;
+  padding-left: var(--padding-identation);
+  padding-right: var(--padding-identation);
 
   background-color: var(--white);
   background-image: url('/images/main-curve.svg');
@@ -172,8 +206,18 @@ $mobile-and-below: 550px;
   background-size: cover;
 
   @media (max-width: $tablet-and-below) {
+    padding-left: 98px;
+    padding-right: 98px;
     background-image: url('/images/main-curve-tablet.svg');
     flex-direction: column;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    padding-left: var(--padding-identation-mobile);
+    padding-right: var(--padding-identation-mobile);
+    background-image: url('/images/main-curve-mobile.svg');
+    flex-direction: column;
+    margin-top: 160px;
   }
 }
 
@@ -193,6 +237,15 @@ $mobile-and-below: 550px;
     justify-items: revert;
     max-width: 573px;
   }
+
+  @media (max-width: $mobile-and-below) {
+    grid-template-areas: revert;
+    justify-content: center;
+    justify-items: center;
+    max-width: 330px;
+    gap: 16px;
+    height: 220px;
+  }
 }
 
 .main div {
@@ -206,20 +259,32 @@ $mobile-and-below: 550px;
   place-content: center;
 
   @media (max-width: $tablet-and-below) {
+    font-size: 20px;
     grid-area: number;
     width: 48px;
     height: 48px;
     align-self: center;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    grid-area: revert;
+    align-self: revert;
   }
 }
 
 .main h2 {
   font-size: 32px;
   font-weight: 600;
+
   @media (max-width: $tablet-and-below) {
     grid-area: heading;
     align-self: end;
     font-size: 28px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    grid-area: revert;
+    align-self: revert;
   }
 }
 
@@ -234,20 +299,34 @@ $mobile-and-below: 550px;
     grid-area: details;
     text-align: revert;
     font-size: 16px;
+    line-height: 28px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    grid-area: revert;
+    text-align: center;
   }
 }
 
 .profile {
   grid-area: profile;
-  padding: 120px var(--padding-idention) 120px var(--padding-idention);
+  padding: 120px var(--padding-identation) 120px
+    var(--padding-identation);
 
   display: flex;
   justify-content: center;
   background-color: var(--white);
 
   @media (max-width: $tablet-and-below) {
-    padding: 120px var(--padding-idention-tablet) 120px
-      var(--padding-idention-tablet);
+    padding: 120px var(--padding-identation-tablet) 120px
+      var(--padding-identation-tablet);
+  }
+
+  @media (max-width: $mobile-and-below) {
+    flex-direction: column;
+    padding: 100px var(--padding-identation-mobile) 0px
+      var(--padding-identation-mobile);
+    align-items: center;
   }
 }
 
@@ -268,10 +347,23 @@ $mobile-and-below: 550px;
   position: relative;
   left: -80px;
   top: 170px;
+  margin-right: -64px;
+
   @media (max-width: $tablet-and-below) {
     max-width: 514px;
     padding: 48px;
+    margin-right: -48px;
     top: 150px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    gap: 16px;
+    align-items: center;
+    max-width: 500px;
+    padding: 32px;
+    margin-right: 0px;
+    top: -50px;
+    left: 0;
   }
 }
 
@@ -280,8 +372,15 @@ $mobile-and-below: 550px;
   color: var(--white);
   font-size: 56px;
   font-weight: 600;
+
   @media (max-width: $tablet-and-below) {
     font-size: 48px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
   }
 }
 
@@ -291,8 +390,14 @@ $mobile-and-below: 550px;
   font-size: 18px;
   font-weight: 400;
   line-height: 2;
+
   @media (max-width: $tablet-and-below) {
     font-size: 16px;
+    line-height: 28px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    text-align: center;
   }
 }
 
@@ -324,6 +429,10 @@ $mobile-and-below: 550px;
   position: absolute;
   bottom: -62px;
   right: 10px;
+
+  @media (max-width: $mobile-and-below) {
+    display: none;
+  }
 }
 
 .footer {
@@ -332,6 +441,10 @@ $mobile-and-below: 550px;
   place-content: center;
   padding-top: 80px;
   background-color: var(--white);
+
+  @media (max-width: $mobile-and-below) {
+    padding-top: 0px;
+  }
 }
 
 .logo_icon_wrapper {
