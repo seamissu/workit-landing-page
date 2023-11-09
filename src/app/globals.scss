@@ -1,6 +1,4 @@
-/*
-  CSS Reset
-*/
+// CSS Reset
 *,
 *::before,
 *::after {
@@ -45,14 +43,7 @@ h6 {
   isolation: isolate;
 }
 
-/* Global CSS */
-// header,
-// main,
-// section,
-// footer {
-//   border: 2px solid;
-// }
-
+// Global baseline styles
 :root {
   --dark-purple: hsl(273deg 85% 13%);
   --eucaplyptus: hsl(150deg 100% 63%);
