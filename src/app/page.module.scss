@@ -190,7 +190,7 @@ $mobile-and-below: 550px;
   }
 }
 
-.main {
+.maincontent {
   font-family: var(--font-fraunces);
   color: var(--dark-purple);
   grid-area: main;
@@ -223,7 +223,7 @@ $mobile-and-below: 550px;
   }
 }
 
-.main article {
+.maincontent article {
   max-width: 354px;
   height: 308px;
   display: grid;
@@ -250,7 +250,7 @@ $mobile-and-below: 550px;
   }
 }
 
-.main div {
+.maincontent div {
   font-weight: 600;
   font-size: 24px;
   width: 56px;
@@ -274,7 +274,7 @@ $mobile-and-below: 550px;
   }
 }
 
-.main h2 {
+.maincontent h2 {
   font-size: 32px;
   font-weight: 600;
 
@@ -290,7 +290,7 @@ $mobile-and-below: 550px;
   }
 }
 
-.main p {
+.maincontent p {
   font-family: var(--font-manrope);
   text-align: center;
   font-size: 18px;

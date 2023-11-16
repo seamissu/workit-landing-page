@@ -5,7 +5,7 @@ import styles from './page.module.scss';
 
 export default function Home() {
   return (
-    <div className={styles.wrapper}>
+    <main className={styles.wrapper}>
       <header className={styles.header}>
         <div className={styles.superheader}>
           <Image
@@ -32,7 +32,7 @@ export default function Home() {
         />
       </header>
 
-      <main className={styles.main}>
+      <div className={styles.maincontent}>
         <article>
           <div>1</div>
           <h2>Actionable insights</h2>
@@ -60,7 +60,7 @@ export default function Home() {
             hidden costs or unexpected fees.
           </p>
         </article>
-      </main>
+      </div>
 
       <section className={styles.profile}>
         <Image
@@ -135,6 +135,6 @@ export default function Home() {
         width={142}
         height={113}
       />
-    </div>
+    </main>
   );
 }
